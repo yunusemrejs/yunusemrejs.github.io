@@ -4,16 +4,31 @@
         <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon.ico?"/>
         <title>Emre Kara | Front End Developer</title>
         <style>
-            @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
-            @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-            body {
-                margin: 0px;
-                padding: 0px;
-                width: 100%;
-                font-family: "proxima nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+            /* roboto-condensed-regular - latin */
+            @font-face {
+                font-family: 'Roboto Condensed';
+                font-style: normal;
                 font-weight: 400;
-                color: #111;
-                background-color: #fefaf6;
+                src: url('./fonts/roboto-condensed-v19-latin-regular.eot'); /* IE9 Compat Modes */
+                src: local(''),
+                url('./fonts/roboto-condensed-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/roboto-condensed-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/roboto-condensed-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/roboto-condensed-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/roboto-condensed-v19-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+            }
+            /* pacifico-regular - latin */
+            @font-face {
+                font-family: 'Pacifico';
+                font-style: normal;
+                font-weight: 400;
+                src: url('./fonts/pacifico-v17-latin-regular.eot'); /* IE9 Compat Modes */
+                src: local(''),
+                url('./fonts/pacifico-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/pacifico-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/pacifico-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/pacifico-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/pacifico-v17-latin-regular.svg#Pacifico') format('svg'); /* Legacy iOS */
             }
             .unselectable {
 	            -moz-user-select: -moz-none;
@@ -23,16 +38,54 @@
 	            -ms-user-select: none;
 	            user-select: none
             }
+            body {
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                color: #111;
+                background-color: #fefaf6;
+            }
+            h1 {
+                font-family: 'Pacifico', cursive;
+                font-size: 3em;
+                font-weight: 400;
+            }
+            h2 {
+                font-family: 'Pacifico', cursive;
+                font-size: 2.5em;
+                font-weight: 400;
+            }
+            section {
+                max-width: 90%;
+                min-width: 0;
+                padding-top: 2rem;
+                margin: 0 auto;
+                border: none;
+                overflow: hidden;
+                font-family: 'Roboto Condensed', sans-serif;
+                border-radius: 15px;
+            }
+            main {
+                max-width: 90%;
+                min-width: 0;
+                padding-top: 2rem;
+                margin: 0 auto;
+                background: none;
+                border: none;
+                overflow: hidden;
+            } 
             #navbar {
                 display: flex;
                 background-color: #111;
                 z-index: 1000;
             }
-            #header-img {
+            #logo {
                 position: relative;
                 top: 30px;
                 left: 50%;
                 transform: translateX(-40px);
+            }
+            #logo img{
                 cursor: pointer;
                 width: 95px;
                 height: 95px;
@@ -41,6 +94,9 @@
                 border-color: #333333;
                 border-radius: 50%;
                 background-color: #fefaf6;
+            }
+            #logo img:hover {
+                animation: glitch 1s linear infinite;
             }
             .nav-list {
                 list-style-type: none;
@@ -57,6 +113,8 @@
                 justify-content: flex-start;
             }
             .nav-link {
+                font-family: "proxima nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-weight: 400;
                 display: block;
                 color: #fff;
                 text-align: center;
@@ -67,27 +125,12 @@
                 margin: 0 auto;
                 width: 32px;
             }
-            main {
-                max-width: 90%;
-                min-width: 0;
-                padding-top: 2rem;
-                margin: 0 auto;
-                background: none;
-                border: none;
-                overflow: hidden;
-            }
             .hero-body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 3rem 1.5rem;
                 margin: 0 auto;
-            }
-            .hero-title {
-                font-family: 'Pacifico', cursive;
-                font-size: 3em;
-                font-weight: 400;
-                margin-bottom: 0px;
             }
             #text-hero {
                 box-sizing: border-box;
@@ -107,8 +150,22 @@
                 position: relative;
                 width: 500px;
             }
-            #contact {
-                font-family: 'Roboto Condensed', sans-serif;
+            #projects {
+                max-width: 90%;
+                min-width: 0;
+                padding-top: 2rem;
+                margin: 0 auto;
+                border: none;
+                overflow: hidden;
+                background: linear-gradient(180.1deg,#142c69 -59.06%,rgba(20,44,105,0) 65.9%),#008081;
+            }
+            .projects-body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 3rem 1.5rem;
+                border-radius: 50%;
+                margin: 0 auto;
             }
             #social-media {
                 display:flex;
@@ -225,10 +282,10 @@
     <body>
         <header>
             <nav id="navbar">
-                <img src="./static/img/my-avatar.png" alt="" id="header-img">
+                <a href="#text-hero" id="logo"><img src="./static/img/my-avatar.png" alt=""></a>
                 <ul class="nav-list left">
                     <li><a href="#text-hero" class="nav-link">about me</a></li>
-                    <li><a href="" class="nav-link">projects</a></li>
+                    <li><a href="#projects" class="nav-link">projects</a></li>
                     <li><a href="#contact" class="nav-link">contact</a></li>
                 </ul>
                 <ul class="nav-list rigth">
@@ -243,16 +300,22 @@
                     <div id="text-hero">
                         <h1 class="hero-title unselectable">Front-end Developer</h1>
                         <p class="unselectable" style="word-wrap:normal; cursor:default; font-family: 'Roboto Condensed';">
-                        I am a front end developer. I love creating innovative and functional websites. 
-                        I have been involved in software development since I was a kid. Programming is my biggest passion. 
-                        I am a developer constantly trying to learn something new and find simple solutions to complex problems.
+                            I'm a passionate front end developer. I love creating innovative and functional websites and being a part of the development Web technology.I have been involved in software development since I was a kid. Programming is my biggest passion.  I am a developer constantly trying to learn something new and find simple solutions to complex problems.
                     </p>
                     </div>
                     <div id="img-hero" class="unselectable">
-                        <img src="./static/img/hero-image.png" alt="" class="hero-image">
+                        <img src="./static/img/hero-image.svg" alt="" class="hero-image">
                     </div>
                 </div>
             </section>
+            <section id="projects">
+                <div class="projects-body">
+                    <h2>My Projects</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </section> 
             <section id="contact">
                 <ul id="social-media" class="social-media">
                     <li>
