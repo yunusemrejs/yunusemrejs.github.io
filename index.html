@@ -32,6 +32,117 @@
                 url('./fonts/pacifico-v17-latin-regular.svg#Pacifico') format('svg'); /* Legacy iOS */
                 font-display: swap;
             }
+            @media (min-width:1280px) { /*geniş cihazlar */
+                /*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
+                h1 {
+                font-size: 3.2em !important;
+                }
+                h2 {
+                font-size: 2.5em !important;
+                }
+                p {
+                font-size: 18px !important;
+                }
+                /* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
+                #social-media li a {
+                    width: 210px;
+                    height: 80px;
+                }  
+            }
+            @media (max-width:1280px) { /*pc */
+                h1 {
+                    font-size: 2.6em !important;
+                }
+                h2 {
+                    font-size: 2em !important;
+                }
+                p {
+                    font-size: 16px !important;
+                }
+                /* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
+                #social-media li a {
+                    width: 165px;
+                    height: 62px;
+                }     
+            }
+            @media (max-width:1024px){ /*small pc*/
+                /*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
+                h1 {
+                    font-size: 2.4em !important;
+                }
+                h2 {
+                    font-size: 2em !important;
+                }
+                p {
+                    font-size: 14px !important;
+                }
+                /* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
+                #social-media li a {
+                    width: 150px;
+                    height: 57px;  
+                } 
+                #social-media li a span {
+                    font-size: 0.88em;
+                    letter-spacing: 3px !important;
+                }  
+                #social-media li a img {
+                    width: 32px;
+                    height: 32px;
+                }  
+            }
+            @media (max-width:960px) { /*tablet devices*/
+                /*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
+                h1 {
+                    font-size: 1.91em !important;
+                }
+                h2 {
+                    font-size: 1.8em !important;
+                }
+                p {
+                    font-size: 12px !important;
+                }
+                /* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
+                #social-media li a { 
+                    width: 118px;
+                    height: 43px;    
+                } 
+                #social-media li a img {
+                    width: 24px;
+                    height: 24px;
+                }
+                #social-media li a span {
+                    font-size: 0.75em;
+                    letter-spacing: 1px !important;
+                } 
+            }
+            @media (max-width: 768px) { /*telephone devices*/
+                /*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
+                h1 {
+                    font-size: 1.17em !important;
+                }
+                h2 {
+                    font-size: 1em !important;
+                }
+                p {
+                    font-size: 10px !important;
+                }
+                /* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
+                #social-media li a {
+                    width: 82px;
+                    height: 31px;    
+                } 
+                #social-media li a .fa {
+                    padding-right: 0 !important;
+                }
+                #social-media li a img {
+                    width: 16px;
+                    height: 16px;
+                }
+                #social-media li a span {
+                    font-size: 0.5em;
+                    letter-spacing: 0.5px !important;
+                } 
+            }
             .unselectable {
 	            -moz-user-select: -moz-none;
 	            -khtml-user-select: none;
@@ -47,14 +158,8 @@
                 color: #111;
                 background-color: #fefaf6;
             }
-            h1 {
+            h1,h2,h3,h4,h5,h6 {
                 font-family: 'Pacifico', cursive;
-                font-size: 3em;
-                font-weight: 400;
-            }
-            h2 {
-                font-family: 'Pacifico', cursive;
-                font-size: 2.5em;
                 font-weight: 400;
             }
             section {
@@ -205,7 +310,7 @@
                 color: #262626;
                 line-height: 80px;
                 transition: .5s;
-                padding-right: 14px;
+                padding-right: 6%;
                 margin: auto 0px;
             }
             #social-media li a span {
@@ -221,11 +326,9 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                width: 210px;
-                height: 80px;
                 background: #fff;
                 text-align: left;
-                padding-left: 20px;
+                padding-left: 9%;
                 transform: rotate(-30deg) skew(25deg) translate(0,0);
                 transition:.5s;
                 box-shadow: -20px 20px 10px rgba(0,0,0,.5);;
@@ -323,7 +426,7 @@
                 <div class="hero-body">
                     <div id="text-hero">
                         <h1 class="hero-title unselectable">Front-end Developer</h1>
-                        <p class="unselectable" style="word-wrap:normal; cursor:default; font-family: 'Roboto Condensed';">
+                        <p class="unselectable" style="word-wrap:normal; cursor:default;">
                             I'm a passionate front end developer. I love creating innovative and functional websites and being a part of the development Web technology.I have been involved in software development since I was a kid. Programming is my biggest passion.  I am a developer constantly trying to learn something new and find simple solutions to complex problems.
                     </p>
                     </div>
@@ -336,7 +439,7 @@
                 <div class="projects-body">
                     <h2>My Projects</h2>
                     <div id="projects-card">
-                        
+
                     </div>
                 </div>
             </section> 
