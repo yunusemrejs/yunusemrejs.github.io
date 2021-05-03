@@ -79,15 +79,17 @@
             #navbar {
                 display: flex;
                 background-color: #111;
+                padding: 12px 15px;
                 z-index: 1000;
             }
             #logo {
-                position: relative;
-                top: 30px;
+                position: absolute;
+                top: 20px;
                 left: 50%;
                 transform: translateX(-40px);
             }
             #logo img{
+                transition: all .2s ease-in-out;
                 cursor: pointer;
                 width: 95px;
                 height: 95px;
@@ -99,6 +101,9 @@
             }
             #logo img:last-child {
                 display: none;
+            }
+            #logo:hover img{
+                transform: scale(1.2);
             }
             #logo:hover img:last-child{
                 display: block;
