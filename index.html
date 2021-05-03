@@ -30,7 +30,7 @@
                 url('./fonts/pacifico-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
                 url('./fonts/pacifico-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
                 url('./fonts/pacifico-v17-latin-regular.svg#Pacifico') format('svg'); /* Legacy iOS */
-                
+                font-display: swap;
             }
             .unselectable {
 	            -moz-user-select: -moz-none;
@@ -163,6 +163,10 @@
                 position: relative;
                 width: 500px;
             }
+            .hero-image img {
+                width: 500px;
+                height: auto;
+            }
             #projects {
                 max-width: 90%;
                 min-width: 0;
@@ -199,6 +203,10 @@
                 transition: .5s;
                 padding-right: 14px;
                 margin: auto 0px;
+            }
+            #social-media li a .fa img {
+                width: 32px;
+                height: 32px;
             }
             #social-media li a span {
                 padding: 0;
@@ -305,8 +313,8 @@
                     <li><a href="#contact" class="nav-link">contact</a></li>
                 </ul>
                 <ul class="nav-list rigth">
-                    <li><a href="https://www.instagram.com/yunusemre.js" class="nav-link">Github |<!--<img src="./static/img/instagram.png" alt="">--></a></li>
-                    <li> <a href="https://github.com/yunusemre-js" class="nav-link">Instagram <!--<img src="./static/img/github.png" alt="">--></a></li>
+                    <li><a href="https://github.com/yunusemre-js" class="nav-link">Github |<!--<img src="./static/img/instagram.png" alt="">--></a></li>
+                    <li> <a href="https://www.instagram.com/yunusemre.js" class="nav-link">Instagram <!--<img src="./static/img/github.png" alt="">--></a></li>
                 </ul>
             </nav>
         </header>
