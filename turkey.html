@@ -8,6 +8,12 @@
                 margin: 0;
                 background-color: #fefaf6;
             }
+            .main {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin: auto;
+            }
             .flag {
                 background-color:  #e30a17;
                 width: 60vw;
@@ -17,11 +23,13 @@
                 background-color: white;
                 width: 1.3333vw;
                 height: 40vw;
+                border-bottom: 1px solid black;
+                border-left: 1px solid black;
             }
             .moon{
                 position: absolute;
                 top: 10vw;
-                left: 10vw;
+                left: 30vw;
                 width: 20vw;
                 height: 20vw;
                 background-color: #fff;
@@ -31,7 +39,7 @@
             .moon-inside {
                 position: absolute;
                 top: 12vw;
-                left: 15vw;
+                left: 35vw;
                 width: 16vw;
                 height: 16vw;
                 background-color: #e30a17;
@@ -41,7 +49,7 @@
             .star {
                 position: absolute;
                 top: 15vw;
-                left: 28.3vw;
+                left: 58.3vw;
                 background: #fff;
                 width: 10vw;
                 height: 10vw;
@@ -52,15 +60,16 @@
         </style>
     </head>
     <body>
-        <div class="flag">
+        <div class="main">
             <div class="white">
             </div>
-            <div class="moon">
-                
+            <div class="flag">
+                <div class="moon">
+                </div>
+                <div class="moon-inside">
+                </div>
+                <div class="star"></div>
             </div>
-            <div class="moon-inside">
-            </div>
-            <div class="star"></div>
         </div>
     </body>
 </html>
