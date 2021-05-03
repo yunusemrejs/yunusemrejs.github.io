@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Flag of Turkey</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .flag {
+                background-color:  #e30a17;
+                width: 60vw;
+                height: 40vw;
+            }
+            .moon{
+                position: absolute;
+                top: 10vw;
+                left: 10vw;
+                width: 20vw;
+                height: 20vw;
+                background-color: #fff;
+                clip-path: circle(50% at 50% 50%);
+                z-index: 1;
+            }
+            .moon-inside {
+                position: absolute;
+                top: 12vw;
+                left: 15vw;
+                width: 16vw;
+                height: 16vw;
+                background-color: #e30a17;
+                clip-path: circle(50% at 50% 50%);
+                z-index: 2;
+            }
+            .star {
+                position: absolute;
+                top: 15vw;
+                left: 28.3vw;
+                background: #fff;
+                width: 10vw;
+                height: 10vw;
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                z-index: 3;
+                transform: rotate(45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flag">
+            <div class="moon">
+                
+            </div>
+            <div class="moon-inside">
+            </div>
+            <div class="star"></div>
+        </div>
+    </body>
+</html>
