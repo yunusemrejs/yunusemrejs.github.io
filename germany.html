@@ -13,42 +13,39 @@
                 margin: 0;
                 background: gray;
             }
-            .flag {
-                margin: auto;
+            .main {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 65.407%;
-                padding-bottom: 39.244%;
+                justify-content: center;
+                background-color: gray;
             }
-            .black {
-                width: 100%;
-                padding-bottom: 20.28%;
+            .flag {
+                position: relative;
+                width: 56.2587%;
+                padding-bottom: 11.25%;
                 background-color: #000;
             }
-            .red {
+            .flag::before {
+                top: 100%;
+                content: '';
+                position: absolute;
                 width: 100%;
-                padding-bottom: 20.28%;
+                padding-bottom:  20%;
                 background-color: #ff0000;
             }
-            .yellow {
+            .flag::after {
+                top: 200%;
+                content: '';
+                position: absolute;
                 width: 100%;
-                padding-bottom: 20.28%;
+                padding-bottom:  20%;
                 background-color: #ffcc00;
             }
         </style>
     </head>
     <body>
-        <div class="flag">
-            <div class="black">
-
+        <div class="main">
+            <div class="flag">
             </div>
-            <div class="red">
-    
-            </div>
-            <div class="yellow">
-    
-            </div> 
         </div>
     </body>
 </html>
