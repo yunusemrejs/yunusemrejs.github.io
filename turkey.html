@@ -14,12 +14,8 @@
                 background-color: gray;
                 text-align: center;
             }
-            .main {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
             .flag {
+                position: relative;
                 margin: 0px;
                 background-color:  #e30a17;
                 width: 63.0583289%;
@@ -30,36 +26,38 @@
                 display: flex;
                 position: absolute;
                 width: 1.40%;
-                padding-bottom: 42.0388859%;
+                height: 100%;
                 background-color: white;
             }
             .moon{
                 position: absolute;
-                margin-top: 10%;
-                left: 28.26463%;
-                width: 21.052%;
-                padding-bottom: 21.052%;
+                margin-top: 16.66%;
+                left: 16.66%;
+                width: 33.33%;
+                padding-bottom: 33.33%;
                 background-color: #fff;
                 clip-path: circle(50% at 50% 50%);
-                z-index: 1;
-            }
-            .moon-inside {
+                transform-style: preserve-3d;
+            }  
+            .moon::after{
+                content: '';
                 position: absolute;
-                margin-top: 12.2%;
-                left: 33.51949%;
-                width: 16.81555%;
-                padding-bottom: 16.81555%;
+                margin-top: 10%;
+                margin-left: -20%;
                 background-color: #e30a17;
+                width: 80%;
+                padding-bottom: 80%;
                 clip-path: circle(50% at 50% 50%);
-                z-index: 2;
+                transform: translateZ(-1px);
             }
-            .star {
+            .flag::after {
+                content: '';
                 position: absolute;
-                margin-top: 15%;
-                left: 47%;
+                margin-top: 25%;
+                left: 45%;
                 background: #fff;
-                width: 10.526%;
-                padding-bottom: 10.526%;
+                width: 16.66%;
+                padding-bottom: 16.66%;
                 clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
                 z-index: 3;
                 transform: rotate(50deg);
@@ -67,14 +65,10 @@
         </style>
     </head>
     <body>
-        <div class="main">
             <div class="flag">  
                 <div class="moon">
                 </div>
-                <div class="moon-inside">
-                </div>
                 <div class="star"></div>
-            </div>
-        </div>        
+            </div>      
     </body>
 </html>
