@@ -14,25 +14,22 @@
 				margin: 0;
 				background: gray;
 			}
-			.main {
-				display: flex;
-				justify-content: center;
-				background-color: gray;
-				margin: auto;
+			.container {
 				max-width: 66%;
+				margin: auto;
 			}
 			.flag {
 				position: relative;
-				width: 56.2587%;
-				padding-bottom: 11.25%;
+				width: 100%;
+				padding-bottom: 20%;
 				background-color: #000;
 			}
 			.flag::before {
+				position: absolute;
 				top: 100%;
 				content: "";
-				position: absolute;
 				width: 100%;
-				padding-bottom: 20%;
+				padding-top: 20%;
 				background-color: #ff0000;
 			}
 			.flag::after {
@@ -46,7 +43,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="main">
+		<div class="container">
 			<div class="flag"></div>
 		</div>
 	</body>
