@@ -30,6 +30,7 @@
 			.flag::before {
 				content: "";
 				display: -webkit-box;
+				display: -moz-box;
 				display: -ms-flexbox;
 				display: flex;
 				position: absolute;
@@ -48,6 +49,7 @@
 				-webkit-clip-path: circle(50% at 50% 50%);
 				clip-path: circle(50% at 50% 50%);
 				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
 				transform-style: preserve-3d;
 			}
 			.moon::after {
@@ -61,6 +63,7 @@
 				-webkit-clip-path: circle(50% at 50% 50%);
 				clip-path: circle(50% at 50% 50%);
 				-webkit-transform: translateZ(-1px);
+				-moz-transform: translateZ(-1px);
 				transform: translateZ(-1px);
 			}
 			.flag::after {
@@ -98,7 +101,9 @@
 				);
 				z-index: 3;
 				-webkit-transform: rotate(50deg);
+				-moz-transform: rotate(50deg);
 				-ms-transform: rotate(50deg);
+				-o-transform: rotate(50deg);
 				transform: rotate(50deg);
 			}
 		</style>
