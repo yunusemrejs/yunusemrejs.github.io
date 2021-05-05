@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>The Flag of Germany</title>
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            html, body {
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                margin: 0;
-                background: gray;
-            }
-            .main {
-                display: flex;
-                justify-content: center;
-                background-color: gray;
-            }
-            .flag {
-                position: relative;
-                width: 56.2587%;
-                padding-bottom: 11.25%;
-                background-color: #000;
-            }
-            .flag::before {
-                top: 100%;
-                content: '';
-                position: absolute;
-                width: 100%;
-                padding-bottom:  20%;
-                background-color: #ff0000;
-            }
-            .flag::after {
-                top: 200%;
-                content: '';
-                position: absolute;
-                width: 100%;
-                padding-bottom:  20%;
-                background-color: #ffcc00;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="main">
-            <div class="flag">
-            </div>
-        </div>
-    </body>
+	<head>
+		<title>The Flag of Germany</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				background: gray;
+			}
+			.main {
+				display: flex;
+				justify-content: center;
+				background-color: gray;
+				margin: auto;
+				max-width: 66%;
+			}
+			.flag {
+				position: relative;
+				width: 56.2587%;
+				padding-bottom: 11.25%;
+				background-color: #000;
+			}
+			.flag::before {
+				top: 100%;
+				content: "";
+				position: absolute;
+				width: 100%;
+				padding-bottom: 20%;
+				background-color: #ff0000;
+			}
+			.flag::after {
+				top: 200%;
+				content: "";
+				position: absolute;
+				width: 100%;
+				padding-bottom: 20%;
+				background-color: #ffcc00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="flag"></div>
+		</div>
+	</body>
 </html>
