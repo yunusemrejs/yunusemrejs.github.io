@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Flag of Turkey</title>
+		<style>
+			* {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				background-color: gray;
+				text-align: center;
+			}
+			.container {
+				max-width: 66%;
+				margin: auto;
+				padding: 3%;
+			}
+			.flag {
+				position: relative;
+				background-color: #e30a17;
+				width: 100%;
+				padding-bottom: 66.66%;
+			}
+			.flag::before {
+				content: "";
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: flex;
+				position: absolute;
+				width: 2.22%;
+				height: 100%;
+				background-color: white;
+			}
+			.moon {
+				position: absolute;
+				top: 25%;
+				left: 16.66%;
+				margin-left: 2.22%; /*beyaz kısım kadar sağa kaydor*/
+				width: 33.33%;
+				height: 50%;
+				background-color: #fff;
+				-webkit-clip-path: circle(50% at 50% 50%);
+				clip-path: circle(50% at 50% 50%);
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.moon::after {
+				content: "";
+				position: absolute;
+				top: 10%;
+				left: 23.06%;
+				background-color: #e30a17;
+				width: 80%;
+				padding-bottom: 80%;
+				-webkit-clip-path: circle(50% at 50% 50%);
+				clip-path: circle(50% at 50% 50%);
+				-webkit-transform: translateZ(-1px);
+				-moz-transform: translateZ(-1px);
+				transform: translateZ(-1px);
+			}
+			.flag::after {
+				content: "";
+				position: absolute;
+				top: 37.5%;
+				left: 46.38%;
+				background: #fff;
+				width: 16.66%;
+				margin-left: 2.22%;
+				padding-bottom: 16.66%;
+				-webkit-clip-path: polygon(
+					50% 0%,
+					61% 35%,
+					98% 35%,
+					68% 57%,
+					79% 91%,
+					50% 70%,
+					21% 91%,
+					32% 57%,
+					2% 35%,
+					39% 35%
+				);
+				clip-path: polygon(
+					50% 0%,
+					61% 35%,
+					98% 35%,
+					68% 57%,
+					79% 91%,
+					50% 70%,
+					21% 91%,
+					32% 57%,
+					2% 35%,
+					39% 35%
+				);
+				z-index: 3;
+				-webkit-transform: rotate(50deg);
+				-moz-transform: rotate(50deg);
+				-ms-transform: rotate(50deg);
+				-o-transform: rotate(50deg);
+				transform: rotate(50deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="flag">
+				<div class="moon"></div>
+			</div>
+		</div>
+	</body>
+</html>
