@@ -19,6 +19,7 @@ button {
 	color: #222;
 }
 header {
+	height: 48px;
 	width: 100%;
 }
 a {
@@ -31,7 +32,6 @@ a:hover {
 	text-decoration: underline !important;
 }
 
-/*classları dizin şeklinde yazdım ney neyin içinde anlaşılsın diye*/
 .container {
 	display: -webkit-box;
 	display: -webkit-flex;
