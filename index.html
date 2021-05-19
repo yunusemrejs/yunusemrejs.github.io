@@ -1,640 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta
-			name="google-site-verification"
-			content="JzjFgFlt6BuWwfLFMg8RigfaOyzLowkqitIsJMrPfaY"
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
 		/>
 		<link
 			rel="shortcut icon"
 			type="image/x-icon"
 			href="./static/img/favicon.ico?"
 		/>
-		<title>Emre Kara | Front End Developer</title>
-		<style>
-			@font-face {
-				font-family: "Roboto Condensed";
-				font-style: normal;
-				font-weight: 400;
-				src: url("./fonts/roboto-condensed-v19-latin-regular.eot"); /* IE9 Compat Modes */
-				src: local(""),
-					url("./fonts/roboto-condensed-v19-latin-regular.eot?#iefix")
-						format("embedded-opentype"),
-					/* IE6-IE8 */ url("./fonts/roboto-condensed-v19-latin-regular.woff2")
-						format("woff2"),
-					/* Super Modern Browsers */
-						url("./fonts/roboto-condensed-v19-latin-regular.woff")
-						format("woff"),
-					/* Modern Browsers */
-						url("./fonts/roboto-condensed-v19-latin-regular.ttf")
-						format("truetype"),
-					/* Safari, Android, iOS */
-						url("./fonts/roboto-condensed-v19-latin-regular.svg#RobotoCondensed")
-						format("svg"); /* Legacy iOS */
-				font-display: swap;
-			}
-			/* pacifico-regular - latin */
-			@font-face {
-				font-family: "Pacifico";
-				font-style: normal;
-				font-weight: 400;
-				src: url("./fonts/pacifico-v17-latin-regular.eot"); /* IE9 Compat Modes */
-				src: local(""),
-					url("./fonts/pacifico-v17-latin-regular.eot?#iefix")
-						format("embedded-opentype"),
-					/* IE6-IE8 */ url("./fonts/pacifico-v17-latin-regular.woff2")
-						format("woff2"),
-					/* Super Modern Browsers */
-						url("./fonts/pacifico-v17-latin-regular.woff") format("woff"),
-					/* Modern Browsers */ url("./fonts/pacifico-v17-latin-regular.ttf")
-						format("truetype"),
-					/* Safari, Android, iOS */
-						url("./fonts/pacifico-v17-latin-regular.svg#Pacifico") format("svg"); /* Legacy iOS */
-				font-display: swap;
-			}
-			@media (min-width: 1280px) {
-				/*geniş cihazlar */
-				/*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
-				h1 {
-					font-size: 2.6em !important;
-				}
-				h2 {
-					font-size: 2em !important;
-				}
-				p {
-					font-size: 16px !important;
-				}
-				/* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
-				#social-media li a {
-					width: 165px;
-					height: 62px;
-				}
-			}
-			@media (max-width: 1280px) {
-				/*pc */
-				h1 {
-					font-size: 2.6em !important;
-				}
-				h2 {
-					font-size: 2em !important;
-				}
-				p {
-					font-size: 16px !important;
-				}
-				/* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
-				#social-media li a {
-					width: 165px;
-					height: 62px;
-				}
-			}
-			@media (max-width: 1024px) {
-				/*small pc*/
-				/*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
-				h1 {
-					font-size: 2.4em !important;
-				}
-				h2 {
-					font-size: 2em !important;
-				}
-				p {
-					font-size: 14px !important;
-				}
-				/* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
-				#social-media li a {
-					width: 150px;
-					height: 57px;
-				}
-				#social-media li a span {
-					font-size: 0.88em;
-					letter-spacing: 3px !important;
-				}
-				#social-media li a img {
-					width: 32px;
-					height: 32px;
-				}
-			}
-			@media (max-width: 960px) {
-				/*tablet devices*/
-				/*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
-				h1 {
-					font-size: 1.91em !important;
-				}
-				h2 {
-					font-size: 1.8em !important;
-				}
-				p {
-					font-size: 12px !important;
-				}
-				/* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
-				#social-media li a {
-					width: 118px;
-					height: 43px;
-				}
-				#social-media li a img {
-					width: 24px;
-					height: 24px;
-				}
-				#social-media li a span {
-					font-size: 0.75em;
-					letter-spacing: 1px !important;
-				}
-			}
-			@media (max-width: 768px) {
-				/*telephone devices*/
-				/*Bazı ana elementlerin responsive uyumlu hale getirilmesi*/
-				h1 {
-					font-size: 1.17em !important;
-				}
-				h2 {
-					font-size: 1em !important;
-				}
-				p {
-					font-size: 10px !important;
-				}
-				/* Contact bölümündeki sosyal medya ikonlarının responsiveleştirilmesi */
-				#social-media li a {
-					width: 82px;
-					height: 31px;
-				}
-				#social-media li a .fa {
-					padding-right: 0 !important;
-				}
-				#social-media li a img {
-					width: 16px;
-					height: 16px;
-				}
-				#social-media li a span {
-					font-size: 0.5em;
-					letter-spacing: 0.5px !important;
-				}
-			}
-			.unselectable {
-				-moz-user-select: -moz-none;
-				-webkit-user-select: none;
-				-o-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-			body {
-				margin: 0px;
-				padding: 0px;
-				width: 100%;
-				color: #111;
-				background-color: #fefaf6;
-			}
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-family: "Pacifico", cursive;
-				font-weight: 400;
-			}
-			section {
-				max-width: 90%;
-				min-width: 0;
-				padding-top: 2rem;
-				margin: 0 auto;
-				border: none;
-				overflow: hidden;
-				font-family: "Roboto Condensed", sans-serif;
-				-webkit-border-radius: 15px;
-				-moz-border-radius: 15px;
-				border-radius: 15px;
-			}
-			main {
-				max-width: 90%;
-				min-width: 0;
-				padding-top: 2rem;
-				margin: 0 auto;
-				background: none;
-				border: none;
-				overflow: hidden;
-			}
-			#navbar {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: flex;
-				background-color: #111;
-				padding: 12px 15px;
-				z-index: 1000;
-			}
-			#logo {
-				position: absolute;
-				top: 20px;
-				left: 50%;
-				-webkit-transform: translateX(-40px);
-				-moz-transform: translateX(-40px);
-				-ms-transform: translateX(-40px);
-				-o-transform: translateX(-40px);
-				transform: translateX(-40px);
-			}
-			#logo img {
-				-webkit-transition: all 0.2s ease-in-out;
-				-o-transition: all 0.2s ease-in-out;
-				-moz-transition: all 0.2s ease-in-out;
-				transition: all 0.2s ease-in-out;
-				cursor: pointer;
-				width: 95px;
-				height: 95px;
-				border-style: solid;
-				border-width: 2px;
-				border-color: #333333;
-				-webkit-border-radius: 50%;
-				-moz-border-radius: 50%;
-				border-radius: 50%;
-				background-color: #fefaf6;
-			}
-			#logo img:last-child {
-				display: none;
-			}
-			#logo:hover img {
-				-webkit-transform: scale(1.2);
-				-moz-transform: scale(1.2);
-				-ms-transform: scale(1.2);
-				-o-transform: scale(1.2);
-				transform: scale(1.2);
-			}
-			#logo:hover img:last-child {
-				display: block;
-			}
-			#logo:hover img:first-child {
-				display: none;
-			}
-			.nav-list {
-				list-style-type: none;
-				padding: 0;
-				margin: 0;
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: flex;
-				width: 100%;
-				-webkit-box-align: center;
-				-webkit-align-items: center;
-				-moz-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-			}
-			.rigth {
-				-webkit-box-pack: end;
-				-webkit-justify-content: flex-end;
-				-moz-box-pack: end;
-				-ms-flex-pack: end;
-				justify-content: flex-end;
-			}
-			.left {
-				-webkit-box-pack: start;
-				-webkit-justify-content: flex-start;
-				-moz-box-pack: start;
-				-ms-flex-pack: start;
-				justify-content: flex-start;
-			}
-			.nav-link {
-				font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial,
-					sans-serif;
-				font-weight: 400;
-				display: block;
-				color: #fff;
-				text-align: center;
-				padding: 12px 10px;
-				text-decoration: none;
-			}
-			.nav-link img {
-				margin: 0 auto;
-				width: 32px;
-			}
-			.hero-body {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: center;
-				-webkit-justify-content: center;
-				-moz-box-pack: center;
-				-ms-flex-pack: center;
-				justify-content: center;
-				-webkit-box-align: center;
-				-webkit-align-items: center;
-				-moz-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				padding: 3rem 1.5rem;
-				margin: 0 auto;
-			}
-			#text-hero {
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-				text-align: left;
-				max-width: 100%;
-				min-width: 0;
-				-webkit-flex-basis: 48%;
-				-ms-flex-preferred-size: 48%;
-				flex-basis: 48%;
-			}
-			#img-hero {
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-				text-align: center;
-				max-width: 100%;
-				min-width: 0;
-				-webkit-flex-basis: 48%;
-				-ms-flex-preferred-size: 48%;
-				flex-basis: 48%;
-			}
-			#img-hero img {
-				max-width: 100%;
-				min-width: 0;
-			}
-			.hero-image {
-				position: relative;
-				width: 500px;
-			}
-			.hero-image img {
-				width: 500px;
-				height: auto;
-			}
-			#projects {
-				max-width: 90%;
-				min-width: 0;
-				padding-top: 2rem;
-				margin: 0 auto;
-				border: none;
-				overflow: hidden;
-				background: -webkit-linear-gradient(
-						269.9deg,
-						#142c69 -59.06%,
-						rgba(20, 44, 105, 0) 65.9%
-					),
-					#008081;
-				background: -moz-linear-gradient(
-						269.9deg,
-						#142c69 -59.06%,
-						rgba(20, 44, 105, 0) 65.9%
-					),
-					#008081;
-				background: -o-linear-gradient(
-						269.9deg,
-						#142c69 -59.06%,
-						rgba(20, 44, 105, 0) 65.9%
-					),
-					#008081;
-				background: linear-gradient(
-						180.1deg,
-						#142c69 -59.06%,
-						rgba(20, 44, 105, 0) 65.9%
-					),
-					#008081;
-			}
-			.projects-body {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: center;
-				-webkit-justify-content: center;
-				-moz-box-pack: center;
-				-ms-flex-pack: center;
-				justify-content: center;
-				-webkit-box-align: center;
-				-webkit-align-items: center;
-				-moz-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				padding: 3rem 1.5rem;
-				-webkit-border-radius: 50%;
-				-moz-border-radius: 50%;
-				border-radius: 50%;
-				margin: 0 auto;
-			}
-			#social-media {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: center;
-				-webkit-justify-content: center;
-				-moz-box-pack: center;
-				-ms-flex-pack: center;
-				justify-content: center;
-				margin: 2rem auto;
-				height: 300px;
-				padding: 0;
-			}
-			#social-media li {
-				list-style: none;
-				margin: 0 5px;
-			}
-			#social-media li a .fa {
-				width: 32px;
-				font-size: 40px;
-				color: #262626;
-				line-height: 80px;
-				-webkit-transition: 0.5s;
-				-o-transition: 0.5s;
-				-moz-transition: 0.5s;
-				transition: 0.5s;
-				padding-right: 6%;
-				margin: auto 0px;
-			}
-			#social-media li a span {
-				padding: 0;
-				margin: 0;
-				color: #262626;
-				letter-spacing: 4px;
-				-webkit-transition: 0.5s;
-				-o-transition: 0.5s;
-				-moz-transition: 0.5s;
-				transition: 0.5s;
-			}
-			#social-media li a {
-				-webkit-box-align: center;
-				-webkit-align-items: center;
-				-moz-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				text-decoration: none;
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: start;
-				-webkit-justify-content: flex-start;
-				-moz-box-pack: start;
-				-ms-flex-pack: start;
-				justify-content: flex-start;
-				align-items: center;
-				background: #fff;
-				text-align: left;
-				padding-left: 9%;
-				-webkit-transform: rotate(-30deg) skew(25deg) translate(0, 0);
-				-moz-transform: rotate(-30deg) skew(25deg) translate(0, 0);
-				-ms-transform: rotate(-30deg) skew(25deg) translate(0, 0);
-				-o-transform: rotate(-30deg) skew(25deg) translate(0, 0);
-				transform: rotate(-30deg) skew(25deg) translate(0, 0);
-				-webkit-transition: 0.5s;
-				-o-transition: 0.5s;
-				-moz-transition: 0.5s;
-				transition: 0.5s;
-				-webkit-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-				-moz-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-				box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-			}
-			#social-media li a:before {
-				content: "";
-				position: absolute;
-				top: 10px;
-				left: -20px;
-				height: 100%;
-				width: 20px;
-				background: #b1b1b1;
-				-webkit-transform: 0.5s;
-				-moz-transform: 0.5s;
-				-ms-transform: 0.5s;
-				-o-transform: 0.5s;
-				transform: 0.5s;
-				-webkit-transform: rotate(0deg) skewY(-45deg);
-				-moz-transform: rotate(0deg) skewY(-45deg);
-				-ms-transform: rotate(0deg) skewY(-45deg);
-				-o-transform: rotate(0deg) skewY(-45deg);
-				transform: rotate(0deg) skewY(-45deg);
-			}
-			#social-media li a:after {
-				content: "";
-				position: absolute;
-				bottom: -20px;
-				left: -10px;
-				height: 20px;
-				width: 100%;
-				background: #b1b1b1;
-				-webkit-transform: 0.5s;
-				-moz-transform: 0.5s;
-				-ms-transform: 0.5s;
-				-o-transform: 0.5s;
-				transform: 0.5s;
-				-webkit-transform: rotate(0deg) skewX(-45deg);
-				-moz-transform: rotate(0deg) skewX(-45deg);
-				-ms-transform: rotate(0deg) skewX(-45deg);
-				-o-transform: rotate(0deg) skewX(-45deg);
-				transform: rotate(0deg) skewX(-45deg);
-			}
-			#social-media li a:hover {
-				-webkit-transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-				-moz-transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-				-ms-transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-				-o-transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-				transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
-				-webkit-box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
-				-moz-box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
-				box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
-			}
-			#social-media li:hover .fa {
-				color: #fff;
-			}
-			#social-media li:hover span {
-				color: #fff;
-			}
-			#social-media li:hover:nth-child(1) a {
-				background: #7dbbe6;
-			}
-			#social-media li:hover:nth-child(1) a:before {
-				background: #6997da;
-			}
-			#social-media li:hover:nth-child(1) a:after {
-				background: #8cc8e6;
-			}
-			#social-media li:hover:nth-child(2) a {
-				background: #2867b2;
-			}
-			#social-media li:hover:nth-child(2) a:before {
-				background: #334a61;
-			}
-			#social-media li:hover:nth-child(2) a:after {
-				background: #4e6fa8;
-			}
-			#social-media li:hover:nth-child(3) a {
-				background: #00aced;
-			}
-			#social-media li:hover:nth-child(3) a:before {
-				background: #097aa5;
-			}
-			#social-media li:hover:nth-child(3) a:after {
-				background: #53b9e0;
-			}
-			#social-media li:hover:nth-child(4) a {
-				background: #c13584;
-			}
-			#social-media li:hover:nth-child(4) a:before {
-				background: #991666;
-			}
-			#social-media li:hover:nth-child(4) a:after {
-				background: #c1558c;
-			}
-		</style>
+		<link rel="stylesheet" href="./static/css/fullpage.min.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Emre Kara | Front-End Developer</title>
+		<link rel="stylesheet" href="./static/css/style.css" />
+		<script
+			type="text/javascript"
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+		></script>
 	</head>
 	<body>
-		<header>
-			<nav id="navbar">
-				<a href="#text-hero" id="logo">
+		<header class="header">
+			<nav>
+				<div class="header-left">
+					<img
+						class="navmenu-icon"
+						src="./static/img/navbar-icon.svg"
+						alt=""
+						width="32"
+						height="32"
+					/>
+					<ul>
+						<li><a class="nav-link" href="#home">Home</a></li>
+						<li><a class="nav-link" href="#about">About</a></li>
+						<li><a class="nav-link" href="#projects">Projects</a></li>
+						<li><a class="nav-link" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<a href="#text-hero" class="logo">
 					<img src="./static/img/my-avatar.png" alt="" />
-					<img src="./static/img/my-avatar-hover.png" alt="" />
+					<!-- <img src="./static/img/my-avatar-hover.png" alt="" /> -->
 				</a>
-				<ul class="nav-list left">
-					<li><a href="#text-hero" class="nav-link">about me</a></li>
-					<li><a href="#projects" class="nav-link">projects</a></li>
-					<li><a href="#contact" class="nav-link">contact</a></li>
-				</ul>
-				<ul class="nav-list rigth">
-					<li>
-						<a href="https://github.com/yunusemrejs" class="nav-link"
-							>Github |<!--<img src="./static/img/instagram.png" alt="">--></a
-						>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/yunusemre.js" class="nav-link"
-							>Instagram
-							<!--<img src="./static/img/github.png" alt="">--></a
-						>
-					</li>
-				</ul>
+				<div class="header-right"></div>
 			</nav>
 		</header>
-		<main>
-			<section>
-				<div class="hero-body">
-					<div id="text-hero">
-						<h1 class="hero-title unselectable">Front-end Developer</h1>
-						<p class="unselectable" style="word-wrap: normal; cursor: default">
+		<div id="fullpage">
+			<div class="section home">
+				<div class="bg-img"></div>
+				<div class="home-text">
+					<h1 class="unselectable">EMRE KARA</h1>
+					<p class="unselectable">Front-End Developer</p>
+				</div>
+			</div>
+			<div class="section aboutMe">
+				<div class="aboutContainer">
+					<div class="aboutText">
+						<h3>Front-end Developer</h3>
+						<p>
 							I'm a passionate front end developer. I love creating innovative
 							and functional websites and being a part of the development Web
-							technology.I have been involved in software development since I
+							technology. I have been involved in software development since I
 							was a kid. Programming is my biggest passion. I am a developer
 							constantly trying to learn something new and find simple solutions
 							to complex problems.
 						</p>
 					</div>
-					<div id="img-hero" class="unselectable">
-						<img src="./static/img/hero-image.svg" alt="" class="hero-image" />
+					<div class="aboutImage">
+						<img src="./static/img/hacker.svg" width="480px" alt="" />
 					</div>
 				</div>
-			</section>
-			<section id="projects">
-				<div class="projects-body">
-					<h2>My Projects</h2>
-					<div id="projects-card"></div>
-				</div>
-			</section>
-			<section id="contact">
+			</div>
+			<div class="section contact">
 				<ul id="social-media" class="social-media">
 					<li>
 						<a href="https://github.com/yunusemrejs">
@@ -685,7 +132,16 @@
 						</a>
 					</li>
 				</ul>
-			</section>
-		</main>
+			</div>
+		</div>
+		<script src="static/js/fullpage.min.js"></script>
+		<script>
+			new fullpage("#fullpage", {
+				autoScrolling: true,
+				navigation: true,
+				navigationTooltips: ["Home", "About Me", "Contact"],
+				css3: true,
+			});
+		</script>
 	</body>
 </html>
