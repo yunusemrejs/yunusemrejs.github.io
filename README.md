@@ -1,5 +1,3 @@
 # My Personal Site
 
-My personal Site Source Codes 
-
-Work in progress...
+My personal portfolio site source codes 
